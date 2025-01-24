@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Header = () => {
   return (
     <header className="fixed-top">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-  
-        <div className="container-fluid ">
-          <a className="navbar-brand w-25 text-center fs-4 fw-bold "  style={{color:"#64db21"}} href="/"> MOTHILAL SANJAY</a>
+        <div className="container-fluid">
+          <Link className="navbar-brand w-25 text-center fs-4 fw-bold" style={{color:"#64db21"}} to="/">
+            MOTHILAL SANJAY
+          </Link>
           <button 
             className="navbar-toggler" 
             type="button" 
@@ -26,25 +28,24 @@ const Header = () => {
             <div className="offcanvas-body w-75 fs-5 fw-semibold">
               <ul className="navbar-nav justify-content-evenly flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link active" href="/">Home</a>
+                  <Link className="nav-link active" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="/about">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/skills">Skills</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/portfolio">Portfolio</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/contact">Contact</a>
-              </li>
+                  <Link className="nav-link" to="/about">About</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/skills">Skills</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/portfolio">Portfolio</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">Contact</Link>
+                </li>
               </ul>
             </div>
           </div>
-          </div>
-          
+        </div>
       </nav>
     </header>
   );
